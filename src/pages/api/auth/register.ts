@@ -5,22 +5,27 @@ export const POST: APIRoute = async ({ request, redirect }) => {
 
   /* Get form data */
 
-  console.log("FORMDATA");
+  console.log("TEXT");
   console.log("========");
-  const formData = await request.formData();
-  console.log(formData);
+  const text = await request.text();
+  console.log(text);
   console.log("========");
-  const email = formData.get("email")?.toString();
-  const password = formData.get("password")?.toString();
-  const name = formData.get("name")?.toString();
+  // console.log("FORMDATA");
+  // console.log("========");
+  // const formData = await request.formData();
+  // console.log(formData);
+  // console.log("========");
+  // const email = formData.get("email")?.toString();
+  // const password = formData.get("password")?.toString();
+  // const name = formData.get("name")?.toString();
 
-  console.log(`FORMDATA NAME: >>${name}<<`);
-  console.log(`FORMDATA EMAIL: >>${email}<<`);
-  console.log(`FORMDATA PASSWORD: >>${password}<<`);
+  // console.log(`FORMDATA NAME: >>${name}<<`);
+  // console.log(`FORMDATA EMAIL: >>${email}<<`);
+  // console.log(`FORMDATA PASSWORD: >>${password}<<`);
 
-  if (!email || !password || !name) {
-    return new Response("Missing form data", { status: 400 });
-  }
+  // if (!email || !password || !name) {
+  //   return new Response("Missing form data", { status: 400 });
+  // }
 
   /* Create user */
   try {

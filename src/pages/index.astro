@@ -24,12 +24,12 @@ if (Astro.request.method === "POST") {
     <h1>Register</h1>
     <form method="post" action="/api/auth/register">
       <label>
-        Username:
-        <input type="text" name="name" required />
-      </label>
-      <label>
         Email:
         <input type="email" name="email" required />
+      </label>
+      <label>
+        Name:
+        <input type="text" name="name" required />
       </label>
       <label>
         Password:
