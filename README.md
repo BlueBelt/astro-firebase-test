@@ -25,4 +25,10 @@ export default defineConfig({
   adapter: node({
     mode: "middleware"
   })
-});```
+});
+```
+
+Added basic Registration page in place of index code and a script to display the form post data.
+
+### At this point the form data is transmitted and displayed by the script
+
